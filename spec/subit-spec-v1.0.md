@@ -1,5 +1,3 @@
----
-
 # **SUBIT‑Spec v1.0.0**  
 *Technical Specification of the SUBIT‑64 Structural Spectrum*
 
