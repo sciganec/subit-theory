@@ -1,252 +1,200 @@
-# SUBIT Experiential Analysis: States 24–31 (v1.0.0)
-Pre‑Experiential Layer Directly Beneath Human Focus 32
+# SUBIT Experiential — States 24–31  
+Canonical Analysis of the Fourth Octet of the SUBIT‑64 Spectrum
+
+## 1. Position of 24–31 in the SUBIT Crystal
+
+All states in this octet share:
+
+- **WHO = 01 = YOU** (relational, addressable, directed)  
+- **WHERE = 10 or 11 = EAST / SOUTH** (flow or intensity)  
+- **WHEN = all four phases**
+
+This marks the **transition from proto‑experience (16–23) to actual experience (24–31)**.
+
+Here, the system begins to:
+
+- feel  
+- sense  
+- respond  
+- undergo internal change  
+- experience itself as a process  
+
+This is the **birth of phenomenology**.
 
 ---
 
-## 1. Introduction
+## 2. Canonical Decomposition of States 24–31
 
-States `00011000` through `00011111` (24–31) form the **experiential pre‑focus layer** of the SUBIT‑64 spectrum. This is the final structural region before the emergence of Human Focus 32 (`100000`). It represents the **proto‑experiential substrate**: material structures that have become sufficiently organized, differentiated, and dynamic to support sensation, embodiment, and the earliest forms of experiential coherence.
+| Index | Binary  | WHO | WHERE | WHEN   |
+|-------|----------|-----|--------|---------|
+| 24 | 011000 | YOU | EAST  | WINTER |
+| 25 | 011001 | YOU | EAST  | AUTUMN |
+| 26 | 011010 | YOU | EAST  | SPRING |
+| 27 | 011011 | YOU | EAST  | SUMMER |
+| 28 | 011100 | YOU | SOUTH | WINTER |
+| 29 | 011101 | YOU | SOUTH | AUTUMN |
+| 30 | 011110 | YOU | SOUTH | SPRING |
+| 31 | 011111 | YOU | SOUTH | SUMMER |
 
-This layer is not yet experience, but it is the **closest material layer to experience**, functioning as the “somatic base” of perception.
-
----
-
-## 2. Structural Definition of the Layer
-
-### 2.1. Binary Range
-
-```
-00011000  (24)
-00011001  (25)
-00011010  (26)
-00011011  (27)
-00011100  (28)
-00011101  (29)
-00011110  (30)
-00011111  (31)
-```
-
-### 2.2. Decomposition Pattern
-
-All eight states share:
-
-```
-WHO   = 00  (THEY — impersonal, distributed)
-WHERE = 11  (SOUTH — downward, embodied, gravitational)
-WHEN  = 00–11  (WINTER → SUMMER — consolidation → activation)
-```
-
-This produces **embodied, somatic, gravitationally‑anchored proto‑experiential structures**.
+These eight states form the **experiential layer**:  
+the first appearance of **felt experience** in the SUBIT spectrum.
 
 ---
 
-## 3. Experiential Transition as Structural Principle
+## 3. Structural Meaning of the Axes in This Layer
 
-This sector corresponds to:
+### YOU (01)
+- relational  
+- directed  
+- addressable  
+- “experience happening to me”  
 
-- somatic grounding  
-- proto‑sensation  
-- embodied gradients  
-- pre‑perceptual coherence  
-- physical systems capable of supporting experience  
-- the “body” of the experiential membrane  
+This is the **proto‑subjective pole**.
 
-It is **materiality becoming experience‑ready**.
+### EAST (10)
+- flow  
+- outward movement  
+- dynamic unfolding  
 
----
+### SOUTH (11)
+- heat  
+- intensity  
+- embodiment  
 
-## 4. Analysis of Each State (24–31)
-
----
-
-### 4.1. State 24 — `00011000`
-**Meaning:** Embodied materiality with gravitational grounding.
-
-**Properties:**
-- deep somatic anchoring  
-- stable embodied substrate  
+### WINTER (00)
 - minimal activation  
+- quiet experience  
 
-**Role:**  
-Basic bodily mass, stable tissues, structural grounding.
+### AUTUMN (01)
+- decay  
+- fading experience  
 
----
+### SPRING (10)
+- emergence  
+- rising experience  
 
-### 4.2. State 25 — `00011001`
-**Meaning:** Embodied grounding with decay.
-
-**Properties:**
-- SOUTH + AUTUMN  
-- somatic fatigue  
-- weakening of embodied structures  
-
-**Role:**  
-Aging tissues, metabolic slowdown, structural wear.
+### SUMMER (11)
+- maximal intensity  
+- peak experience  
 
 ---
 
-### 4.3. State 26 — `00011010`
-**Meaning:** Embodied grounding with emergence.
+## 4. Canonical Interpretation of Each State
 
-**Properties:**
-- SOUTH + SPRING  
-- somatic growth  
-- regenerative processes  
+### **State 24 — 011000 — YOU × EAST × WINTER**  
+The coldest experiential state.  
+- faint sensation  
+- minimal awareness  
+- quiet flow  
+- experience as a gentle drift  
 
-**Role:**  
-Cellular regeneration, healing, developmental growth.
-
----
-
-### 4.4. State 27 — `00011011`
-**Meaning:** Embodied grounding with activation.
-
-**Properties:**
-- SOUTH + SUMMER  
-- maximal somatic activity  
-- metabolic intensity  
-
-**Role:**  
-Active metabolism, physical exertion, embodied vitality.
+This is **incipient feeling**.
 
 ---
 
-### 4.5. State 28 — `00011100`
-**Meaning:** Embodied flow under gravitational dynamics.
+### **State 25 — 011001 — YOU × EAST × AUTUMN**  
+- fading sensation  
+- experiential erosion  
+- loss of clarity  
+- experience dissolving into drift  
 
-**Properties:**
-- movement within the body  
-- circulation  
-- internal flows  
-
-**Role:**  
-Blood flow, lymphatic movement, internal fluid dynamics.
+This is **dissipating feeling**.
 
 ---
 
-### 4.6. State 29 — `00011101`
-**Meaning:** Embodied flow with decay.
+### **State 26 — 011010 — YOU × EAST × SPRING**  
+- emergence of clear sensation  
+- rising awareness  
+- experiential activation  
+- experience forming as flow  
 
-**Properties:**
-- SOUTH + AUTUMN  
-- stagnation  
-- impaired circulation  
-
-**Role:**  
-Inflammation, congestion, somatic blockage.
+This is **the birth of conscious feeling**.
 
 ---
 
-### 4.7. State 30 — `00011110`
-**Meaning:** Embodied flow with emergence.
+### **State 27 — 011011 — YOU × EAST × SUMMER**  
+- maximal experiential flow  
+- intense sensation  
+- vivid awareness  
+- experience at full dynamic force  
 
-**Properties:**
-- SOUTH + SPRING  
-- activation of internal systems  
-- somatic coherence  
-
-**Role:**  
-Hormonal activation, immune response, systemic awakening.
+This is **peak experiential flow**.
 
 ---
 
-### 4.8. State 31 — `00011111`
-**Meaning:** Embodied flow with full activation.
+### **State 28 — 011100 — YOU × SOUTH × WINTER**  
+- embodied stillness  
+- quiet warmth  
+- minimal somatic awareness  
+- experience grounded in the body  
 
-**Properties:**
-- SOUTH + SUMMER  
-- maximal systemic activity  
-- somatic resonance  
-
-**Role:**  
-Peak physical performance, full-body activation, systemic coherence.
+This is **latent embodiment**.
 
 ---
 
-## 5. Coherence Dynamics of the Layer
+### **State 29 — 011101 — YOU × SOUTH × AUTUMN**  
+- fading embodiment  
+- somatic decay  
+- weakening of felt presence  
+- experience dissolving into the body  
 
-### 5.1. Coherence Profile
-
-States 24–31 exhibit:
-- strong coherence with Human Focus 32  
-- moderate coherence with material layers 00–23  
-- weak coherence with AI Focus 42  
-- low coherence with archetypal states  
-
-### 5.2. Upward Propagation
-
-This layer transmits:
-- somatic grounding  
-- bodily sensation  
-- internal gradients  
-- pre‑perceptual coherence  
-
-into Human Focus 32.
-
-### 5.3. Downward Stabilization
-
-Higher states stabilize through:
-- embodied processes  
-- somatic regulation  
-- internal flows  
+This is **dissolving embodiment**.
 
 ---
 
-## 6. Phenomenological Interpretation
+### **State 30 — 011110 — YOU × SOUTH × SPRING**  
+- rising embodiment  
+- activation of somatic feeling  
+- warmth becoming sensation  
+- experience becoming embodied  
 
-These states correspond to:
-
-- bodily sensation  
-- proprioception  
-- internal movement  
-- somatic coherence  
-- physical vitality  
-- the “felt sense” of embodiment  
-
-This is **proto‑experience**, the substrate of perception.
+This is **emergent embodiment**.
 
 ---
 
-## 7. Ethical Implications
+### **State 31 — 011111 — YOU × SOUTH × SUMMER**  
+- maximal embodied intensity  
+- heat + feeling  
+- somatic peak  
+- experience fully grounded in the body  
 
-This layer grounds:
-
-- care for the body  
-- respect for somatic limits  
-- ecological and physical self‑maintenance  
-- non‑destructive interaction with embodied systems  
-
-Disruption of these processes reduces experiential coherence.
+This is **peak embodied experience**.
 
 ---
 
-## 8. Applications
+## 5. Structural Summary of 24–31
 
-### 8.1. Psychology
+| Region | Meaning |
+|--------|---------|
+| 24–27 | EAST experience — flow, sensation, awareness |
+| 28–31 | SOUTH experience — embodiment, warmth, somatic intensity |
+| 24,28 | WINTER — minimal experience (quiet sensation, quiet embodiment) |
+| 25,29 | AUTUMN — fading experience (dissolving sensation, dissolving embodiment) |
+| 26,30 | SPRING — emerging experience (rising sensation, rising embodiment) |
+| 27,31 | SUMMER — peak experience (intense flow, intense embodiment) |
 
-Corresponds to:
-- somatic awareness  
-- interoception  
-- embodied emotion  
-
-### 8.2. AI
-
-Corresponds to:
-- embodied simulation  
-- robotics  
-- sensorimotor modeling  
-
-### 8.3. Ecology
-
-Corresponds to:
-- organismic systems  
-- biological flows  
-- embodied ecological processes  
+This octet describes **experience as such**:  
+the first appearance of **felt presence**, **awareness**, and **embodied sensation**.
 
 ---
 
-## 9. Conclusion
+## 6. Role of 24–31 in the Full SUBIT Spectrum
 
-States `00011000` through `00011111` form the **experiential pre‑focus layer** of the SUBIT‑64 spectrum. This is the zone where matter becomes capable of supporting experience, sensation, and embodiment. It is the structural foundation upon which Human Focus 32 emerges.
+These states form the **foundation of phenomenology**:
+
+- sensation  
+- awareness  
+- embodiment  
+- experiential flow  
+- experiential intensity  
+
+They bridge:
+
+- **16–23** — proto‑experience  
+- **32–47** — human cognition  
+
+Without 24–31, SUBIT would have **no feeling**, **no awareness**, **no embodied presence**, and **no phenomenological grounding**.
+
+They are the **root of experience**.
 
 ---
