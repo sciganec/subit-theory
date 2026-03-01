@@ -1,335 +1,332 @@
-# SUBIT CLI Specification (v1.0.0)
-Formal Specification for the SUBIT Command‑Line Interface
+# subit-cli-spec.md  
+Version 1.0.0  
+Status: Canonical Specification   
 
 ---
 
-## 1. Overview
+## 1. Purpose
 
-The SUBIT CLI is a universal command‑line interface for interacting with the SUBIT‑64 framework. It provides a minimal, structural, and deterministic set of commands for:
+This document defines the canonical specification for the SUBIT Command-Line Interface (CLI).  
+The CLI is a thin, deterministic shell over the SUBIT Engine and Simulation Protocol.  
+Its purpose is to provide structural access to:
 
-- encoding inputs into SUBIT states  
-- running SUBIT simulations  
-- analyzing coherence and transitions  
-- inspecting internal engine structures  
-- managing configurations and runtime state  
+- single-event encoding  
+- stream processing  
+- trajectory analysis  
+- state inspection  
+- domain mapping  
+- export for visualization  
 
-This specification defines the canonical behavior, flags, output formats, and error conditions for all commands.
-
----
-
-## 2. Design Goals
-
-The SUBIT CLI adheres to the following principles:
-
-- **Minimality** — each command performs one structural operation.  
-- **Determinism** — identical inputs produce identical outputs.  
-- **Transparency** — internal vectors and states are always inspectable.  
-- **Universality** — works across all SUBIT layers (material → archetypal).  
-- **Coherence‑first** — all operations preserve SUBIT structural integrity.  
-- **Human‑readable** — outputs are clear, aligned with SUBIT terminology.  
+The CLI exposes **structure**, not content.
 
 ---
 
-## 3. Command Groups
+## 2. Canonical Identity
 
-The CLI is organized into five groups:
-
-```
-subit encode      # input → SUBIT state
-subit simulate    # run SUBIT simulation cycles
-subit analyze     # compute coherence, transitions, amplitudes
-subit inspect     # view internal engine structures
-subit util        # helper tools (reset, export, config)
-```
-
-Each group contains subcommands defined below.
-
----
-
-## 4. Encode Commands
-
-### 4.1. Encode raw input
+Command name:
 
 ```
-subit encode input "<string>"
+subit
 ```
 
-Maps arbitrary input into a SUBIT state using structural encoding.
+The CLI operates entirely within the SUBIT crystal:
 
-**Output format:**
+- WHO axis: ME (10), WE (11), YOU (01), THEY (00)  
+- WHERE axis: EAST (10), SOUTH (11), WEST (01), NORTH (00)  
+- WHEN axis: SPRING (10), SUMMER (11), AUTUMN (01), WINTER (00)
 
-```
-STATE: <id> (<binary>)
-WHO: <label>
-WHERE: <label>
-WHEN: <label>
-```
-
-### 4.2. Encode structured fields
+Total states:
 
 ```
-subit encode fields --who <ME|YOU|THEY|IT> --where <NORTH|EAST|SOUTH|WEST> --when <WINTER|SPRING|SUMMER|AUTUMN>
-```
-
-Produces a deterministic 6‑bit state.
-
-### 4.3. Encode numeric state
-
-```
-subit encode state <0–63>
-```
-
-Decodes the 6‑bit structure into WHO/WHERE/WHEN.
-
----
-
-## 5. Simulation Commands
-
-### 5.1. Single simulation step
-
-```
-subit simulate step --input "<string>"
-```
-
-Runs one full SUBIT Engine cycle.
-
-**Output format:**
-
-```
-INPUT → STATE: <id>
-NEXT  → STATE: <id>
-COHERENCE: <float>
-```
-
-### 5.2. Multi‑step simulation
-
-```
-subit simulate run --steps <N> --input-stream <file>
-```
-
-Processes a sequence of inputs.
-
-### 5.3. Continuous simulation loop
-
-```
-subit simulate loop
-```
-
-Runs indefinitely until interrupted.
-
-### 5.4. Simulation flags
-
-- `--decay <float>` — amplitude decay factor  
-- `--mode <deterministic|stochastic|hybrid>`  
-- `--seed <int>` — random seed for stochastic mode  
-
----
-
-## 6. Analysis Commands
-
-### 6.1. Coherence of a state
-
-```
-subit analyze coherence <state>
-```
-
-Computes:
-
-```
-V(i) = SUM_{j=0..63} C[i,j] * A(j)
-```
-
-### 6.2. Transition probabilities
-
-```
-subit analyze transitions <state>
-```
-
-Outputs:
-
-```
-P(i) = V(i) / SUM(V)
-```
-
-### 6.3. Coherence matrix row
-
-```
-subit analyze row <state>
-```
-
-### 6.4. Full amplitude ranking
-
-```
-subit analyze amplitudes
-```
-
-Sorted descending by A(i).
-
----
-
-## 7. Inspect Commands
-
-### 7.1. Current state
-
-```
-subit inspect state
-```
-
-### 7.2. Amplitude vector
-
-```
-subit inspect amplitudes
-```
-
-### 7.3. Coherence vector
-
-```
-subit inspect coherence
-```
-
-### 7.4. Trajectory history
-
-```
-subit inspect history --last <N>
-```
-
-### 7.5. Engine metadata
-
-```
-subit inspect meta
-```
-
-Outputs:
-- engine version  
-- decay factor  
-- simulation mode  
-- seed  
-- timestamp  
-
----
-
-## 8. Utility Commands
-
-### 8.1. Reset engine
-
-```
-subit util reset
-```
-
-Clears amplitude vector and history.
-
-### 8.2. Export engine state
-
-```
-subit util export --format <json|yaml|txt>
-```
-
-### 8.3. Load configuration
-
-```
-subit util load <file>
-```
-
-### 8.4. Validate configuration
-
-```
-subit util validate <file>
+4 × 4 × 4 = 64 = 2⁶
 ```
 
 ---
 
-## 9. Output Specification
+## 3. Command Structure
 
-### 9.1. State Format
-
-```
-<id> (<binary>)  # e.g., 32 (100000)
-```
-
-### 9.2. Coherence Format
+General pattern:
 
 ```
-V(<state>) = <float>
+subit <mode> [options] [arguments]
 ```
 
-### 9.3. Transition Format
+Where:
+
+- `<mode>` selects the operational domain  
+- `[options]` configure behavior  
+- `[arguments]` specify input sources  
+
+Modes are deterministic and mutually exclusive.
+
+---
+
+## 4. Modes
+
+---
+
+### 4.1 encode  
+Encode a single input into one SUBIT state.
+
+Usage:
 
 ```
-<state>: <probability>
+subit encode --text "I feel calm."
+subit encode --file input.txt
+subit encode --json event.json
 ```
 
-### 9.4. Amplitude Format
+Output (conceptual):
 
 ```
-A[<state>] = <float>
-```
-
-### 9.5. Error Format
-
-```
-ERROR: <message>
-HINT: <suggestion>
+STATE: 011100
+WHO:   YOU
+WHERE: SOUTH
+WHEN:  WINTER
+LAYER: Experiential (28)
 ```
 
 ---
 
-## 10. Error Conditions
+### 4.2 stream  
+Process a continuous input stream into a SUBIT trajectory.
 
-### 10.1. Invalid state
-
-```
-ERROR: Invalid state index.
-HINT: Use a value between 0 and 63.
-```
-
-### 10.2. Invalid field
+Usage:
 
 ```
-ERROR: Unknown WHO/WHERE/WHEN value.
-HINT: Valid WHO values: ME, YOU, THEY, IT.
+subit stream --file chat.txt
+subit stream --stdin
+subit stream --json events.json
 ```
 
-### 10.3. Missing input
+Output (conceptual):
 
 ```
-ERROR: No input provided.
-HINT: Use --input "<string>".
+t=0  011000  YOU × EAST × WINTER
+t=1  011010  YOU × EAST × SPRING
+t=2  101010  ME  × EAST × SPRING
+t=3  101011  ME  × EAST × SUMMER
 ```
 
-### 10.4. Invalid configuration
+Optional flags:
 
 ```
-ERROR: Configuration file malformed.
-HINT: Run 'subit util validate <file>'.
+--show-layer
+--show-delta
+--limit <n>
 ```
 
 ---
 
-## 11. Example Session
+### 4.3 analyze  
+Analyze an existing SUBIT trajectory.
+
+Usage:
 
 ```
-$ subit encode input "pressure rising"
-STATE: 27 (00011011)
+subit analyze trajectory.subit
+```
 
-$ subit simulate step --input "pressure rising"
-NEXT: 32 (100000)
-COHERENCE: 0.934
+Output (conceptual):
 
-$ subit analyze transitions 32
-32: 0.41
-31: 0.22
-42: 0.18
-...
+```
+LENGTH: 512 steps
+LAYERS:
+  Material:      12%
+  Experiential:  48%
+  Human:         30%
+  Archetypal:    10%
 
-$ subit inspect amplitudes
-A[32] = 0.91
-A[27] = 0.44
-A[42] = 0.22
+COHERENCE:
+  Temporal:   0.78
+  Horizontal: 0.64
+  Vertical:   0.71
+
+PRIMARY ATTRACTOR:
+  Center: 011010 (YOU × EAST × SPRING)
+  Occupancy: 22%
 ```
 
 ---
 
-## 12. Reference Architecture
+### 4.4 inspect  
+Inspect a single SUBIT state.
+
+Usage:
+
+```
+subit inspect --state 42
+subit inspect --bits 101010
+```
+
+Output:
+
+```
+INDEX: 42
+BITS:  101010
+
+WHO:   ME
+WHERE: EAST
+WHEN:  SPRING
+
+LAYER: Human (32–47)
+ROLE:  Structural emergence, prediction, generative intelligence
+```
+
+---
+
+### 4.5 map  
+Map a domain-specific label to a SUBIT region.
+
+Usage:
+
+```
+subit map --label "panic attack"
+subit map --label "flow state"
+```
+
+Output (conceptual):
+
+```
+LABEL: panic attack
+
+PRIMARY REGION:
+  011111  YOU × SOUTH × SUMMER
+  011011  YOU × EAST  × SUMMER
+```
+
+---
+
+### 4.6 export  
+Export a trajectory into an external format.
+
+Usage:
+
+```
+subit export trajectory.subit --format csv
+subit export trajectory.subit --format json
+```
+
+CSV example:
+
+```
+t,index,bits,who,where,when,layer
+0,24,011000,YOU,EAST,WINTER,Experiential
+1,26,011010,YOU,EAST,SPRING,Experiential
+2,42,101010,ME,EAST,SPRING,Human
+```
+
+---
+
+## 5. Global Options
+
+```
+--lang <code>       # interface language
+--layers <set>      # restrict to specific layers
+--seed <n>          # seed for deterministic components
+--config <file>     # custom config
+--out <file>        # write output to file
+--quiet             # minimal output
+--verbose           # detailed logs
+```
+
+---
+
+## 6. Structural Guarantees
+
+The CLI guarantees:
+
+- canonical mapping of bits to WHO/WHERE/WHEN  
+- deterministic encoding  
+- deterministic transitions  
+- stable output formats  
+- strict separation of structure and content  
+- no semantic interpretation beyond structural extraction  
+
+All states are 6-bit values in the space:
+
+```
+{0,1}⁶
+```
+
+All trajectories are sequences of such states.
+
+---
+
+## 7. Error Conditions
+
+### Invalid mode
+
+```
+ERROR: Unknown mode 'analyse'. Did you mean 'analyze'?
+```
+
+### Invalid bits
+
+```
+ERROR: Expected 6 bits. Received: 10101
+```
+
+### Missing input
+
+```
+ERROR: No input provided. Use --text, --file, or --stdin.
+```
+
+### Invalid trajectory file
+
+```
+ERROR: File is not a valid SUBIT trajectory.
+```
+
+---
+
+## 8. Example Session
+
+```
+subit encode --text "I feel grounded."
+```
+
+Output:
+
+```
+STATE: 011100
+YOU × SOUTH × WINTER
+```
+
+```
+subit stream --file chat.txt --out chat.subit
+subit analyze chat.subit
+```
+
+Output:
+
+```
+PRIMARY ATTRACTOR:
+  011010 (YOU × EAST × SPRING)
+```
+
+---
+
+## 9. Summary
+
+The SUBIT CLI is a deterministic structural interface to the SUBIT Engine.  
+It provides canonical access to encoding, streaming, analyzing, inspecting, mapping, and exporting SUBIT states and trajectories.  
+All operations are grounded in the invariant structure:
+
+```
+Chaos → SUBIT → Bit
+```
+
+and the canonical identity:
+
+```
+4 × 4 × 4 = 64 = 2⁶
+```
+
+---
+
+## 10. Reference Architecture
 
 ```
 +-------------------+
@@ -364,7 +361,7 @@ A[42] = 0.22
 
 ---
 
-## 13. Conclusion
+## 11. Conclusion
 
 The SUBIT CLI Specification defines a complete, minimal, and universal interface for interacting with the SUBIT‑64 framework. It ensures deterministic behavior, structural transparency, and coherence‑aligned operations across all layers of the field.
 
