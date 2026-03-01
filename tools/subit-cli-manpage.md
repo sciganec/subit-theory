@@ -170,17 +170,3 @@ A[42] = 0.22
 ```
 
 ---
-
-# SEE ALSO
-**subit-cli-spec(1)** — formal CLI specification  
-**subit-cli-help(1)** — help output  
-**subit-engine(7)** — SUBIT Engine architecture  
-**subit-simulation-protocol(7)** — simulation workflow  
-**subit-analysis(7)** — coherence and transition analysis
-
----
-
-SUBIT CLI Manual — minimal, deterministic, coherence‑aligned.
-```
-
----
