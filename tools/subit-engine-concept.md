@@ -122,6 +122,4 @@ It works because the SUBIT crystal is isomorphic, the axes are universal, the bi
 
 The SUBIT Engine is a universal structural interpreter, a chaos‑to‑structure transformer, a predictive system, a comparative system, a semantic microscope, and a semantic telescope. It transforms any input stream into a trajectory through the 64‑state SUBIT space, revealing the structure of meaning, behavior, cognition, and systems.
 
-```
-
 ---
