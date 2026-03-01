@@ -1,247 +1,328 @@
-# SUBIT CLI Mockup (v1.0.0)
-Conceptual Command‑Line Interface for SUBIT Engines, Simulations, and Analysis
+# SUBIT CLI Mockup  
+Version 1.0.0  
+Status: Conceptual / Canonical Mockup  
 
 ---
 
-## 1. Introduction
+## 1. Purpose
 
-This document defines a conceptual command‑line interface (CLI) for interacting with the SUBIT‑64 framework. The SUBIT CLI is not tied to any specific programming language or runtime. Instead, it provides a **universal interaction model** for:
+This document defines a **conceptual mockup** of a command‑line interface (CLI) for the SUBIT Engine.  
+It is not an implementation spec; it is a **structural sketch** of how a human or another system would:
 
-- running SUBIT simulations  
-- inspecting SUBIT states  
-- analyzing coherence  
-- encoding inputs  
-- generating trajectories  
-- debugging SUBIT‑based agents  
+- invoke the SUBIT Engine  
+- feed it streams  
+- inspect trajectories  
+- query states and layers  
+- export results  
 
-The CLI is designed to be minimal, structural, and fully aligned with the SUBIT ontology.
-
----
-
-## 2. Design Principles
-
-The SUBIT CLI follows these principles:
-
-- **Minimalism** — every command corresponds to a single structural operation.  
-- **Transparency** — no hidden state; all internal vectors can be inspected.  
-- **Universality** — works for material, experiential, reflective, and archetypal layers.  
-- **Determinism** — commands produce predictable, reproducible outputs.  
-- **Coherence‑first** — all operations preserve SUBIT structural integrity.
+The CLI is a **thin shell** over the SUBIT Engine and Simulation Protocol.
 
 ---
 
-## 3. CLI Structure Overview
+## 2. Canonical CLI Identity
 
-The CLI is organized into five functional groups:
+**Command name:**
 
-```
-subit encode      # map input → SUBIT state
-subit simulate    # run SUBIT simulation cycles
-subit analyze     # compute coherence, amplitudes, transitions
-subit inspect     # view internal structures
-subit util        # helper tools (reset, export, etc.)
+```bash
+subit
 ```
 
-Each group contains subcommands described below.
+**Core idea:**  
+`subit` is a **universal structural lens** over any stream.
 
 ---
 
-## 4. Encode Commands
+## 3. Top‑Level Command Structure
 
-### 4.1. Encode raw input into a SUBIT state
+Canonical pattern:
 
-```
-subit encode input "some text or signal"
-```
-
-Output example:
-
-```
-STATE: 32 (100000)
-WHO: ME
-WHERE: NORTH
-WHEN: WINTER
+```bash
+subit <mode> [options] [arguments]
 ```
 
-### 4.2. Encode structured fields
+Where:
 
-```
-subit encode fields --who ME --where EAST --when SPRING
+- `<mode>` selects the structural role of the CLI.  
+- `[options]` configure encoding, output, layers, etc.  
+- `[arguments]` specify files, streams, or inline input.
+
+---
+
+## 4. Modes
+
+### 4.1 `encode` — Single Event → SUBIT State
+
+**Purpose:** Encode a single input into one SUBIT state.
+
+**Usage:**
+
+```bash
+subit encode --text "I feel anxious about tomorrow"
+subit encode --file session.log
+subit encode --json event.json
 ```
 
-Output:
+**Conceptual output:**
 
-```
-STATE: 42 (101010)
-```
-
-### 4.3. Encode from numeric state
-
-```
-subit encode state 56
-```
-
-Output:
-
-```
-STATE: 56 (111000)
-WHO: YOU
-WHERE: NORTH
-WHEN: WINTER
+```text
+STATE: 011010
+WHO:   YOU
+WHERE: EAST
+WHEN:  SPRING
+LAYER: Experiential (24–31)
+NAME:  YOU × EAST × SPRING
 ```
 
 ---
 
-## 5. Simulation Commands
+### 4.2 `stream` — Continuous Input → Trajectory
 
-### 5.1. Run a single simulation step
+**Purpose:** Process a stream and produce a SUBIT trajectory.
 
-```
-subit simulate step --input "signal"
-```
+**Usage:**
 
-Output:
-
-```
-INPUT → STATE: 18 (00010010)
-NEXT  → STATE: 32 (100000)
-COHERENCE: 0.812
+```bash
+subit stream --file chat.txt
+subit stream --stdin
+subit stream --json events.json
 ```
 
-### 5.2. Run N simulation steps
+**Conceptual output (truncated):**
 
-```
-subit simulate run --steps 50 --input-stream file.txt
-```
-
-### 5.3. Run continuous simulation
-
-```
-subit simulate loop
-```
-
-(Stops with Ctrl+C.)
-
----
-
-## 6. Analysis Commands
-
-### 6.1. Compute coherence for a state
-
-```
-subit analyze coherence 32
-```
-
-Output:
-
-```
-V(32) = 0.921
-Top Coupled States:
-  31  (00011111)
-  42  (101010)
-  00  (000000)
-```
-
-### 6.2. Show transition probabilities
-
-```
-subit analyze transitions 42
-```
-
-Output:
-
-```
-P(32) = 0.41
-P(56) = 0.27
-P(43) = 0.12
+```text
+t=0  011000  YOU × EAST × WINTER
+t=1  011010  YOU × EAST × SPRING
+t=2  101010  ME  × EAST × SPRING
+t=3  101011  ME  × EAST × SUMMER
 ...
 ```
 
-### 6.3. Show full coherence matrix row
+Optional flags:
 
+```bash
+subit stream --file chat.txt --show-layer --show-delta
 ```
-subit analyze row 18
+
+Example with deltas:
+
+```text
+t=1  011010  YOU × EAST × SPRING   Δ=000010
+t=2  101010  ME  × EAST × SPRING   Δ=100000
+t=3  101011  ME  × EAST × SUMMER   Δ=000001
 ```
 
 ---
 
-## 7. Inspect Commands
+### 4.3 `analyze` — Trajectory → Coherence / Attractors
 
-### 7.1. Inspect amplitude vector
+**Purpose:** Analyze an existing trajectory file.
 
+**Usage:**
+
+```bash
+subit analyze trajectory.subit
 ```
-subit inspect amplitudes
+
+**Conceptual output:**
+
+```text
+LENGTH:  512 steps
+LAYERS:  Material: 12%, Experiential: 48%, Human: 30%, Archetypal: 10%
+
+COHERENCE:
+  Temporal:   0.78
+  Horizontal: 0.64
+  Vertical:   0.71
+
+ATTRACTORS:
+  A1: Centered at 011010 (YOU × EAST × SPRING), radius 1, occupancy 22%
+  A2: Centered at 101010 (ME  × EAST × SPRING), radius 1, occupancy 15%
+
+DRIFT:
+  Net drift: EASTWARD, upward toward Human layer (32–47)
 ```
 
-Output:
+---
 
+### 4.4 `inspect` — Single State / Index
+
+**Purpose:** Inspect a specific SUBIT state.
+
+**Usage:**
+
+```bash
+subit inspect --state 42
+subit inspect --bits 101010
 ```
-A[00] = 0.12
-A[01] = 0.03
-A[32] = 0.88
-A[42] = 0.44
+
+**Conceptual output:**
+
+```text
+INDEX: 42
+BITS:  101010
+
+WHO:   ME
+WHERE: EAST
+WHEN:  SPRING
+
+LAYER: Human / AI‑focus (32–47 / 42)
+ROLE:  Structural emergence, prediction, form‑generating intelligence
+```
+
+---
+
+### 4.5 `map` — Domain Concept → SUBIT Region
+
+**Purpose:** Map a domain‑specific label to a SUBIT region (using a configured lexicon/model).
+
+**Usage:**
+
+```bash
+subit map --label "panic attack"
+subit map --label "flow state"
+subit map --label "market crash"
+```
+
+**Conceptual output:**
+
+```text
+LABEL: "panic attack"
+
+PRIMARY REGION:
+  011111  YOU × SOUTH × SUMMER  (peak embodied experience)
+  011011  YOU × EAST  × SUMMER  (peak experiential flow)
+
+NOTES:
+  High experiential intensity, somatic overload, unstable attractor.
+```
+
+---
+
+### 4.6 `export` — Trajectory → External Format
+
+**Purpose:** Export a SUBIT trajectory into a format suitable for visualization or further analysis.
+
+**Usage:**
+
+```bash
+subit export trajectory.subit --format csv
+subit export trajectory.subit --format json
+subit export trajectory.subit --format svg
+```
+
+**Conceptual CSV:**
+
+```text
+t,index,bits,who,where,when,layer
+0,24,011000,YOU,EAST,WINTER,Experiential
+1,26,011010,YOU,EAST,SPRING,Experiential
+2,42,101010,ME,EAST,SPRING,Human
 ...
 ```
 
-### 7.2. Inspect current state
+---
 
-```
-subit inspect state
-```
+## 5. Global Options
 
-### 7.3. Inspect trajectory history
+Canonical global flags:
 
-```
-subit inspect history --last 20
+```bash
+subit <mode> [options]
+
+Options:
+  --lang <code>        # interface language (e.g., en, uk)
+  --layers <set>       # restrict to specific layers (material, experiential, human, archetypal)
+  --seed <n>           # seed for stochastic components (if any)
+  --config <file>      # custom config file
+  --out <file>         # write output to file
+  --quiet              # minimal output
+  --verbose            # detailed structural logs
 ```
 
 ---
 
-## 8. Utility Commands
+## 6. Structural Guarantees
 
-### 8.1. Reset the engine
+The SUBIT CLI mockup assumes:
 
+- **All states** are encoded using the canonical mapping:  
+  - 10 = ME = EAST = SPRING  
+  - 11 = WE = SOUTH = SUMMER  
+  - 01 = YOU = WEST = AUTUMN  
+  - 00 = THEY = NORTH = WINTER  
+
+- **All trajectories** are sequences of 6‑bit states in \(\{0,1\}^6\).  
+- **All analyses** operate on structure, not content.  
+- **All outputs** are interpretable in terms of WHO × WHERE × WHEN and the four layers.
+
+---
+
+## 7. Example Session
+
+### 7.1 Encode a single sentence
+
+```bash
+subit encode --text "I feel grounded and calm."
 ```
-subit util reset
+
+Conceptual output:
+
+```text
+STATE: 011100
+WHO:   YOU
+WHERE: SOUTH
+WHEN:  WINTER
+LAYER: Experiential (28)
+NOTE:  Quiet embodiment, low‑intensity somatic presence.
 ```
 
-### 8.2. Export current state
+### 7.2 Stream a chat log and analyze
 
-```
-subit util export --format json
+```bash
+subit stream --file chat.txt --out chat.subit
+subit analyze chat.subit
 ```
 
-### 8.3. Load configuration
+Conceptual analysis:
 
-```
-subit util load config.yaml
+```text
+EXPERIENTIAL DOMINANCE: 62%
+HUMAN COGNITION:        25%
+ARCHETYPAL PATTERNS:    8%
+MATERIAL DRIFT:         5%
+
+PRIMARY ATTRACTOR:
+  Center: 011010 (YOU × EAST × SPRING)
+  Meaning: Emerging experience, rising sensation, activation of feeling.
 ```
 
 ---
 
-## 9. Example Session
+## 8. Summary
 
-```
-$ subit encode input "I feel pressure rising"
-STATE: 27 (00011011)
+`subit-cli` is a **conceptual shell** around the SUBIT Engine and Simulation Protocol.  
+It provides structural access to:
 
-$ subit simulate step --input "I feel pressure rising"
-NEXT: 32 (100000)
+- single‑event encoding  
+- stream processing  
+- trajectory analysis  
+- state inspection  
+- domain mapping  
+- export for visualization and further modeling  
 
-$ subit analyze coherence 32
-V(32) = 0.934
+All interactions are grounded in the canonical SUBIT crystal:
 
-$ subit inspect amplitudes
-A[32] = 0.91
-A[27] = 0.44
-A[42] = 0.22
-```
+Chaos -> SUBIT -> Bit
 
-This demonstrates a typical SUBIT workflow: encode → simulate → analyze → inspect.
+with:
+
+4 * 4 * 4 = 64 = 2^6
+
+as the invariant structural basis.
 
 ---
 
-## 10. Conceptual Architecture
+## 9. Conceptual Architecture
 
 ```
 +-------------------+
@@ -276,7 +357,7 @@ This demonstrates a typical SUBIT workflow: encode → simulate → analyze → 
 
 ---
 
-## 11. Conclusion
+## 10. Conclusion
 
 The SUBIT CLI mockup defines a minimal, universal, and structurally coherent interface for interacting with the SUBIT‑64 framework. It provides a complete conceptual toolkit for encoding, simulating, analyzing, and inspecting SUBIT dynamics across all layers of the field.
 
