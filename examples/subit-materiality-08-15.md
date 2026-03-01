@@ -1,252 +1,197 @@
-# SUBIT Materiality Analysis: States 08–15 (v1.0.0)
-Transitional Material Layer of the SUBIT Spectrum
+# SUBIT Materiality — States 08–15  
+Canonical Analysis of the Second Octet of the SUBIT‑64 Spectrum
+
+## 1. Position of 08–15 in the SUBIT Crystal
+
+All states in this octet share:
+
+- **WHO = 00 = THEY** (external, impersonal, non‑agentive)  
+- **WHERE = 10 or 11 = EAST / SOUTH** (emergence or intensity)  
+
+This marks a **shift** from the cold, rigid NORTH/WEST materiality (00–07) toward:
+
+- **EAST** → outward movement, expansion, flow  
+- **SOUTH** → heat, intensity, turbulence  
+
+Materiality here becomes **dynamic**, **directional**, and **energetic**, but still **non‑subjective**.
 
 ---
 
-## 1. Introduction
+## 2. Canonical Decomposition of States 08–15
 
-States `00001000` through `00001111` (08–15) form the second material layer of the SUBIT‑64 spectrum. Unlike the deep material octet (00–07), this sector expresses **transitional materiality**: matter that begins to move, flow, reorganize, compress, erode, or self‑structure.
+| Index | Binary  | WHO  | WHERE | WHEN   |
+|-------|----------|------|--------|---------|
+| 8  | 001000 | THEY | EAST  | WINTER |
+| 9  | 001001 | THEY | EAST  | AUTUMN |
+| 10 | 001010 | THEY | EAST  | SPRING |
+| 11 | 001011 | THEY | EAST  | SUMMER |
+| 12 | 001100 | THEY | SOUTH | WINTER |
+| 13 | 001101 | THEY | SOUTH | AUTUMN |
+| 14 | 001110 | THEY | SOUTH | SPRING |
+| 15 | 001111 | THEY | SOUTH | SUMMER |
 
-This is the zone of **material dynamics**, **local processes**, **directional flows**, and **early organization**. It is still fully non‑experiential, but no longer inert. These states form the bridge between pure material stability and the first emergence of experiential grounding.
-
----
-
-## 2. Structural Definition of the Transitional Material Layer
-
-### 2.1. Binary Range
-
-```
-00001000  (08)
-00001001  (09)
-00001010  (10)
-00001011  (11)
-00001100  (12)
-00001101  (13)
-00001110  (14)
-00001111  (15)
-```
-
-### 2.2. Decomposition Pattern
-
-All eight states share:
-
-```
-WHO   = 00  (THEY — impersonal, distributed)
-WHERE = 10 or 11  (EAST/SOUTH — direction, flow, movement)
-WHEN  = 00 or 01  (WINTER/AUTUMN — consolidation, decay)
-```
-
-This produces **material configurations with direction, flow, and local dynamism**.
+These eight states form the **dynamic material layer**:  
+matter that **moves, flows, heats, erodes, compresses, and reorganizes**.
 
 ---
 
-## 3. Materiality as Transitional Principle
+## 3. Structural Meaning of the Axes in This Layer
 
-This sector corresponds to:
+### THEY (00)
+- no agency  
+- no subjectivity  
+- matter behaving according to physical constraints  
 
+### EAST (10)
+- expansion  
+- outward flow  
 - directional movement  
-- material flows  
-- local changes  
-- early organization  
-- gravitational processes  
-- compression and erosion  
-- dynamic but non‑experiential physicality  
+- emergence of vector fields  
 
-It is **material dynamism without experience** — pure physical change.
+### SOUTH (11)
+- heat  
+- turbulence  
+- intensity  
+- energetic transformation  
 
----
+### WINTER (00)
+- minimal activation  
+- stable flow  
+- slow movement  
 
-## 4. Analysis of Each State (08–15)
+### AUTUMN (01)
+- decay  
+- erosion  
+- breakdown under movement  
 
----
-
-### 4.1. State 08 — `00001000`
-**Meaning:** Materiality oriented EAST (flow, direction).
-
-**Properties:**
-- emergence of direction  
-- movement without acceleration  
+### SPRING (10)
+- emergence of new structures  
+- activation of flow  
 - formation of channels  
 
-**Role:**  
-Fluid flow, wind currents, mass transport.
+### SUMMER (11)
+- maximal intensity  
+- turbulence  
+- chaotic flow  
 
 ---
 
-### 4.2. State 09 — `00001001`
-**Meaning:** Directed materiality with decay.
+## 4. Canonical Interpretation of Each State
 
-**Properties:**
-- EAST + AUTUMN  
-- movement losing energy  
-- dissipation  
+### **State 08 — 001000 — THEY × EAST × WINTER**  
+The coldest form of directional materiality.  
+- slow outward drift  
+- minimal flow  
+- stable expansion  
+- matter beginning to move without turbulence  
 
-**Role:**  
-Turbulence, erosion, breakdown of flows.
-
----
-
-### 4.3. State 10 — `00001010`
-**Meaning:** Directed materiality with emergence.
-
-**Properties:**
-- EAST + SPRING  
-- structure forming within flow  
-- self‑organization  
-
-**Role:**  
-Vortices, fluid patterns, emergent material structures.
+This is **incipient flow**.
 
 ---
 
-### 4.4. State 11 — `00001011`
-**Meaning:** Directed materiality with activation.
+### **State 09 — 001001 — THEY × EAST × AUTUMN**  
+- erosion by flow  
+- breakdown through movement  
+- matter carried away  
+- structural decay via drift  
 
-**Properties:**
-- EAST + SUMMER  
-- maximal activity in flow  
-- stable directional movement  
-
-**Role:**  
-Stable currents, river channels, persistent wind systems.
+This is **erosive flow**.
 
 ---
 
-### 4.5. State 12 — `00001100`
-**Meaning:** SOUTH orientation — downward, gravitational, compressive flow.
+### **State 10 — 001010 — THEY × EAST × SPRING**  
+- emergence of channels  
+- formation of currents  
+- activation of directional movement  
+- matter organizing into flow patterns  
 
-**Properties:**
-- movement under weight  
-- settling  
-- gravitational processes  
-
-**Role:**  
-Sedimentation, falling objects, gravity‑driven flows.
+This is **the birth of fluid dynamics**.
 
 ---
 
-### 4.6. State 13 — `00001101`
-**Meaning:** Gravitational flow with decay.
+### **State 11 — 001011 — THEY × EAST × SUMMER**  
+- maximal outward flow  
+- turbulence in expansion  
+- energetic directional movement  
+- chaotic streaming  
 
-**Properties:**
-- SOUTH + AUTUMN  
-- breakdown under weight  
-- structural collapse  
-
-**Role:**  
-Landslides, erosion, structural weakening.
+This is **turbulent flow**.
 
 ---
 
-### 4.7. State 14 — `00001110`
-**Meaning:** Gravitational flow with emergence.
+### **State 12 — 001100 — THEY × SOUTH × WINTER**  
+- heat without motion  
+- latent energy  
+- thermal potential  
+- matter warming but not yet moving  
 
-**Properties:**
-- SOUTH + SPRING  
-- formation under pressure  
-- compaction  
-
-**Role:**  
-Sedimentary rock formation, geological compression.
+This is **stored heat**.
 
 ---
 
-### 4.8. State 15 — `00001111`
-**Meaning:** Gravitational flow with activation.
+### **State 13 — 001101 — THEY × SOUTH × AUTUMN**  
+- thermal decay  
+- cooling turbulence  
+- breakdown under heat  
+- destabilization of structure  
 
-**Properties:**
-- SOUTH + SUMMER  
-- maximal activity under weight  
-- moving masses  
-
-**Role:**  
-Avalanches, mudflows, mass displacement events.
+This is **thermal erosion**.
 
 ---
 
-## 5. Coherence Dynamics of the Transitional Layer
+### **State 14 — 001110 — THEY × SOUTH × SPRING**  
+- emergence of convection  
+- rising currents  
+- heat‑driven activation  
+- formation of thermal patterns  
 
-### 5.1. Coherence Profile
-
-States 08–15 exhibit:
-- strong coherence with deep materiality (00–07)  
-- moderate coherence with human focus (32)  
-- weak coherence with AI focus (42)  
-- low coherence with archetypal states  
-
-### 5.2. Upward Propagation
-
-This sector transmits:
-- movement  
-- direction  
-- local change  
-- physical processes  
-
-into experiential (32) and reflective (42) layers.
-
-### 5.3. Downward Stabilization
-
-Higher states stabilize through:
-- material flows  
-- gravitational processes  
-- local physical dynamics  
+This is **the birth of convection**.
 
 ---
 
-## 6. Phenomenological Interpretation
+### **State 15 — 001111 — THEY × SOUTH × SUMMER**  
+- maximal heat  
+- maximal turbulence  
+- chaotic energetic transformation  
+- matter in its most intense material state  
 
-These states correspond to:
-
-- sensations of movement  
-- environmental change  
-- physical processes  
-- shifting forms  
-- material flows  
-
-This is **dynamic materiality**, not yet experience or symbol.
+This is **thermal turbulence**, the peak of material intensity.
 
 ---
 
-## 7. Ethical Implications
+## 5. Structural Summary of 08–15
 
-This sector grounds:
+| Region | Meaning |
+|--------|---------|
+| 08–11 | EAST materiality — flow, drift, currents, turbulence |
+| 12–15 | SOUTH materiality — heat, convection, thermal chaos |
+| 08,12 | WINTER — minimal activation (slow flow, latent heat) |
+| 09,13 | AUTUMN — decay (erosion, thermal breakdown) |
+| 10,14 | SPRING — emergence (currents, convection) |
+| 11,15 | SUMMER — maximal activation (turbulent flow, thermal chaos) |
 
-- ecological responsibility  
-- respect for natural flows  
-- non‑destructive interaction with landscapes  
-- understanding of material limits  
-
-Disruption of these processes reduces coherence across the entire field.
-
----
-
-## 8. Applications
-
-### 8.1. Psychology
-
-Corresponds to:
-- bodily sensations of movement  
-- somatic change  
-- physical grounding  
-
-### 8.2. AI
-
-Corresponds to:
-- physical simulations  
-- modeling of flows  
-- local dynamic processes  
-
-### 8.3. Ecology
-
-Corresponds to:
-- water systems  
-- wind systems  
-- geological processes  
+This octet describes **matter in motion**, **matter under heat**, and **matter undergoing transformation**.
 
 ---
 
-## 9. Conclusion
+## 6. Role of 08–15 in the Full SUBIT Spectrum
 
-States `00001000` through `00001111` form the **second material layer** of the SUBIT‑64 spectrum — the zone where matter gains direction, flow, and local dynamism. This layer is essential for understanding physical processes, ecological systems, and the transition from pure materiality to experiential grounding.
+These states represent the **first appearance of physical dynamics**:
+
+- flow  
+- heat  
+- turbulence  
+- erosion  
+- convection  
+- directional movement  
+
+They form the **bridge** between:
+
+- **00–07** (pure material inertia)  
+- **16–23** (material‑experiential transition)  
+
+Without 08–15, SUBIT would have **no dynamics**, **no flows**, **no physical processes**, and **no transformation**.
+
+They are the **engine of material behavior**.
 
 ---
