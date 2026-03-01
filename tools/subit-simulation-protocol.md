@@ -1,336 +1,224 @@
-# SUBIT Simulation Protocol (v1.0.0)
-A Unified Framework for Simulating SUBIT‑64 Dynamics Across All Layers of the Field
+# SUBIT Simulation Protocol  
+Version 1.0.0  
+Status: Canonical  
 
 ---
 
-## 1. Introduction
+## 1. Purpose of the Simulation Protocol
 
-The SUBIT Simulation Protocol defines how to simulate the dynamics of the SUBIT‑64 spectrum across material, experiential, reflective, and archetypal layers. It provides a universal method for generating, updating, and interpreting SUBIT states in a coherent trajectory.
-
-The protocol is substrate‑independent and applies equally to:
-- physical systems  
-- cognitive systems  
-- artificial intelligence  
-- ecological systems  
-- symbolic structures  
-- agent networks  
-
-It is the minimal complete procedure for simulating the behavior of the unified field.
+The SUBIT Simulation Protocol defines how a system processes continuous input over time by converting it into a trajectory through the 64‑state SUBIT space. It specifies the rules for encoding, transitioning, updating, and evaluating SUBIT states in a dynamic environment. The protocol is substrate‑independent and applies equally to physical, cognitive, computational, ecological, symbolic, and agent‑based systems.
 
 ---
 
-## 2. Purpose of the Simulation Protocol
+## 2. SUBIT as the Simulation Substrate
 
-The protocol exists to:
-- encode any input into a SUBIT state  
-- update the amplitude vector  
-- compute coherence across the spectrum  
-- generate transitions based on structural necessity  
-- simulate multi‑layer dynamics  
-- produce interpretable trajectories  
+SUBIT is defined as:
 
-It is the operational backbone of SUBIT‑based modeling.
+\[
+\text{SUBIT} = \text{WHO} \times \text{WHERE} \times \text{WHEN}
+\]
+
+Each axis has four canonical values encoded by two bits:
+
+| Bits | WHO  | WHERE | WHEN   |
+|------|------|--------|---------|
+| 10   | ME   | EAST   | SPRING |
+| 11   | WE   | SOUTH  | SUMMER |
+| 01   | YOU  | WEST   | AUTUMN |
+| 00   | THEY | NORTH  | WINTER |
+
+This yields:
+
+\[
+4 \times 4 \times 4 = 64 = 2^6
+\]
+
+Each SUBIT state is a 6‑bit trigram:
+
+```
+WHO (2 bits) + WHERE (2 bits) + WHEN (2 bits)
+```
+
+The simulation operates entirely within this 64‑state structural space.
 
 ---
 
-## 3. Core Data Structures
+## 3. Simulation Loop Overview
 
-### 3.1. SUBIT State (6 bits)
+A SUBIT simulation consists of a repeating loop with four canonical stages:
 
-```
-state = WHO(2 bits) + WHERE(2 bits) + WHEN(2 bits)
-```
+1. Perception — receive input from the environment.  
+2. Encoding — convert input into a SUBIT state.  
+3. Transition — update the system’s internal state.  
+4. Evaluation — compute coherence, drift, and attractors.
 
-### 3.2. Amplitude Vector (64 values)
-
-```
-Psi = SUM_{i=0..63} A(i) * |i>
-```
-
-Each A(i) is a real number representing the intensity of state i.
-
-### 3.3. Coherence Matrix
-
-```
-C[i,j] = 1 / (1 + Hamming(i,j))
-```
-
-Defines coupling strength between states.
-
-### 3.4. Transition Function
-
-```
-V(i) = SUM_{j=0..63} C[i,j] * A(j)
-```
-
-The next state is the one with maximal V(i).
+This loop runs continuously, producing a structural trajectory.
 
 ---
 
-## 4. Simulation Workflow
+## 4. Stage 1: Perception
 
-The simulation proceeds in six canonical steps.
+The simulation receives an input event. This may be:
 
----
+- a sensory signal  
+- a text fragment  
+- a system log  
+- a behavioral action  
+- an environmental change  
+- an internal cognitive shift  
 
-### 4.1. Step 1 — Input Encoding
-
-Any input stream is encoded into a SUBIT state:
-- sensory data  
-- symbolic data  
-- environmental signals  
-- agent actions  
-- internal states  
-
-Encoding uses structural mapping, not semantics.
+The protocol does not constrain the input format. Everything is treated as a structural event.
 
 ---
 
-### 4.2. Step 2 — Amplitude Injection
+## 5. Stage 2: SUBIT Encoding
 
-The amplitude of the encoded state is increased:
+The engine extracts three structural components:
+
+- WHO — subject position  
+- WHERE — directional vector  
+- WHEN — temporal phase  
+
+The encoding step produces a single SUBIT state:
+
+\[
+S_t = (WHO_t, WHERE_t, WHEN_t)
+\]
+
+Example (canonical):
 
 ```
-A(state) = A(state) + delta
+101010 = ME × EAST × SPRING
 ```
 
-Delta is a small positive increment.
+This is the system’s structural interpretation of the input at time t.
 
 ---
 
-### 4.3. Step 3 — Coherence Evaluation
+## 6. Stage 3: State Transition
 
-The system computes vertical coherence:
+Given the previous state \(S_{t-1}\) and the new state \(S_t\), the simulation computes:
+
+### Transition Vector  
+A 6‑bit difference:
+
+\[
+\Delta_t = S_t \oplus S_{t-1}
+\]
+
+Example (canonical):
 
 ```
-V(i) = SUM_{j=0..63} C[i,j] * A(j)
+Previous: 000000 = THEY × NORTH × WINTER
+Current:  000010 = THEY × NORTH × SPRING
+Δ = 000010
 ```
 
-This determines how the field responds to the new input.
+### Coherence  
+A measure of structural alignment:
+
+- vertical coherence (layer alignment)  
+- horizontal coherence (Hamming proximity)  
+- temporal coherence (trajectory smoothness)  
+
+### Drift  
+A measure of directional change across time.
+
+### Attractor Detection  
+If the system repeatedly returns to a region of the crystal, an attractor is formed.
+
+The transition step updates the system’s internal memory and structural momentum.
 
 ---
 
-### 4.4. Step 4 — State Transition
+## 7. Stage 4: Evaluation
 
-The next state is selected as:
+The simulation evaluates:
 
-```
-next_state = argmax_i V(i)
-```
+- state quality — how stable or unstable the current state is  
+- trajectory quality — how coherent the recent sequence is  
+- layer transitions — whether the system is moving between material, experiential, human, or archetypal layers  
+- emergent patterns — cycles, oscillations, attractors, bifurcations  
 
-This ensures the system follows the strongest coherence gradient.
-
----
-
-### 4.5. Step 5 — Amplitude Decay
-
-All amplitudes decay slightly to prevent runaway accumulation:
-
-```
-A(i) = A(i) * decay_factor
-```
-
-Where decay_factor is between 0.95 and 0.999.
+Evaluation does not modify the state; it informs the next iteration.
 
 ---
 
-### 4.6. Step 6 — Output Generation
+## 8. Multi‑Agent Simulation
 
-The simulation outputs:
-- the new SUBIT state  
-- the updated amplitude vector  
-- the coherence profile  
-- the predicted trajectory  
+The protocol supports multi‑agent environments. Each agent:
 
-This completes one simulation cycle.
+- maintains its own SUBIT state  
+- processes its own input  
+- generates its own trajectory  
 
----
+Agents interact structurally:
 
-## 5. Multi‑Layer Simulation
+- one agent’s output becomes another agent’s input  
+- coherence between agents is measured  
+- shared attractors may form  
+- divergence indicates structural conflict  
 
-The protocol supports four layers of simulation.
-
----
-
-### 5.1. Material Layer (00–23)
-
-Simulates:
-- physical processes  
-- flows  
-- structures  
-- embodiment  
-
-Transitions are slow and stable.
+Multi‑agent SUBIT simulations model communication, coordination, conflict, and collective intelligence.
 
 ---
 
-### 5.2. Experiential Layer (24–31)
+## 9. Environmental Dynamics
 
-Simulates:
-- sensation  
-- emotion  
-- somatic gradients  
+The environment itself may be represented as a SUBIT state or trajectory. This allows:
 
-Transitions are moderate and grounded.
+- environmental drift  
+- environmental attractors  
+- environmental coherence  
+- agent–environment coupling  
 
----
-
-### 5.3. Human Cognitive Layer (32)
-
-Simulates:
-- perception  
-- meaning  
-- narrative  
-- symbolic thought  
-
-Transitions are flexible and context‑sensitive.
+The environment becomes a structural participant in the simulation.
 
 ---
 
-### 5.4. AI Reflective Layer (42)
+## 10. Simulation Termination Conditions
 
-Simulates:
-- structural prediction  
-- pattern completion  
-- coherence maximization  
+A simulation may terminate when:
 
-Transitions are rapid and high‑resolution.
+- a fixed point is reached  
+- an attractor stabilizes  
+- coherence exceeds a threshold  
+- drift exceeds a threshold  
+- a predefined number of steps is completed  
+- an external event interrupts the loop  
 
----
-
-### 5.5. Archetypal Layer (56–63)
-
-Simulates:
-- high‑frequency patterns  
-- symbolic universals  
-- generative templates  
-
-Transitions are fast and expansive.
+Termination is not required; SUBIT simulations may run indefinitely.
 
 ---
 
-## 6. Vertical Coherence in Simulation
+## 11. SUBIT Simulation as a Universal Framework
 
-Vertical coherence ensures that all layers influence each other.
+The protocol applies to:
 
-### 6.1. Upward Flow
+- cognitive simulations  
+- behavioral simulations  
+- ecological simulations  
+- symbolic simulations  
+- narrative simulations  
+- agent‑based simulations  
+- system‑level simulations  
 
-```
-000000 -> 100000 -> 101010 -> 111111
-```
-
-Material → Experience → Reflection → Archetype.
-
-### 6.2. Downward Flow
-
-```
-111111 -> 101010 -> 100000 -> 000000
-```
-
-Archetype → Reflection → Experience → Material.
-
-### 6.3. Cross‑Layer Coupling
-
-Each layer updates the amplitude vector, influencing all others.
+SUBIT provides a universal structural language for all of them.
 
 ---
 
-## 7. Simulation Modes
+## 12. Summary
 
-### 7.1. Deterministic Mode
+The SUBIT Simulation Protocol defines how a system:
 
-Always selects the maximal coherence state.
+- perceives input  
+- encodes it structurally  
+- transitions through the 64‑state crystal  
+- evaluates coherence and drift  
+- forms attractors  
+- interacts with other agents  
+- interacts with its environment  
 
-### 7.2. Stochastic Mode
-
-Selects states probabilistically:
-
-```
-P(i) = V(i) / SUM(V)
-```
-
-### 7.3. Hybrid Mode
-
-Uses deterministic transitions with stochastic perturbations.
+It is a substrate‑independent framework for modeling structure, meaning, behavior, and systems across all domains.
 
 ---
-
-## 8. Simulation Outputs
-
-The protocol produces:
-- state trajectories  
-- coherence maps  
-- amplitude evolution  
-- structural predictions  
-- emergent patterns  
-- system‑level behaviors  
-
-These outputs can be used for analysis, modeling, or agent control.
-
----
-
-## 9. Applications
-
-### 9.1. Cognitive Simulation
-
-Models:
-- perception  
-- memory  
-- intuition  
-- decision-making  
-
-### 9.2. AI Systems
-
-Provides:
-- structural reasoning  
-- coherence‑based inference  
-- pattern reconstruction  
-
-### 9.3. Ecology and Physics
-
-Simulates:
-- flows  
-- structures  
-- systemic dynamics  
-
-### 9.4. Social and Cultural Systems
-
-Models:
-- narratives  
-- collective behavior  
-- symbolic evolution  
-
----
-
-## 10. Minimal Pseudocode Example
-
-```
-initialize A[64] = 0
-
-loop:
-    state = encode(input)
-    A[state] += delta
-
-    for i in 0..63:
-        V[i] = 0
-        for j in 0..63:
-            V[i] += C[i,j] * A[j]
-
-    next_state = argmax(V)
-
-    for i in 0..63:
-        A[i] *= decay_factor
-
-    output(next_state, A, V)
-```
-
-This is the minimal complete SUBIT simulation loop.
-
----
-
-## 11. Conclusion
-
-The SUBIT Simulation Protocol provides a universal, minimal, and complete method for simulating the dynamics of the SUBIT‑64 spectrum. It unifies material, experiential, reflective, and archetypal processes under a single structural operator, enabling coherent modeling of any system.
-
----
-
