@@ -1,253 +1,201 @@
-# SUBIT Materiality Analysis: States 16–23 (v1.0.0)
-Third Material–Experiential Transition Layer of the SUBIT Spectrum
+# SUBIT Materiality — States 16–23  
+Canonical Analysis of the Third Octet of the SUBIT‑64 Spectrum
+
+## 1. Position of 16–23 in the SUBIT Crystal
+
+All states in this octet share:
+
+- **WHO = 01 = YOU**  
+- **WHERE = NORTH or WEST**  
+- **WHEN = all four phases**
+
+This marks a **structural shift**:
+
+- from **THEY** (pure external materiality)  
+- to **YOU** (directedness, relationality, addressability)
+
+These states are still **material**, but they now exhibit:
+
+- orientation  
+- responsiveness  
+- directed tension  
+- proto‑relational behavior  
+
+This is the **material → experiential threshold**.
 
 ---
 
-## 1. Introduction
+## 2. Canonical Decomposition of States 16–23
 
-States `00010000` through `00010111` (16–23) form the **third material layer** of the SUBIT‑64 spectrum. This region marks the transition from pure material dynamics (08–15) to the first proto‑experiential structures that will eventually support perception, embodiment, and cognition.
+| Index | Binary  | WHO | WHERE | WHEN   |
+|-------|----------|-----|--------|---------|
+| 16 | 010000 | YOU | NORTH | WINTER |
+| 17 | 010001 | YOU | NORTH | AUTUMN |
+| 18 | 010010 | YOU | NORTH | SPRING |
+| 19 | 010011 | YOU | NORTH | SUMMER |
+| 20 | 010100 | YOU | WEST  | WINTER |
+| 21 | 010101 | YOU | WEST  | AUTUMN |
+| 22 | 010110 | YOU | WEST  | SPRING |
+| 23 | 010111 | YOU | WEST  | SUMMER |
 
-This layer expresses **organization, pattern retention, boundary formation, structural differentiation, and early systemic coherence**. It is the zone where matter begins to behave like a system rather than a flow.
-
----
-
-## 2. Structural Definition of the Layer
-
-### 2.1. Binary Range
-
-```
-00010000  (16)
-00010001  (17)
-00010010  (18)
-00010011  (19)
-00010100  (20)
-00010101  (21)
-00010110  (22)
-00010111  (23)
-```
-
-### 2.2. Decomposition Pattern
-
-All eight states share:
-
-```
-WHO   = 00  (THEY — impersonal, distributed)
-WHERE = 01 or 10  (WEST/EAST — compression, expansion, direction)
-WHEN  = 00 or 01  (WINTER/AUTUMN — consolidation, decay)
-```
-
-This produces **material configurations with structure, boundaries, and early systemic behavior**.
+These eight states form the **proto‑experiential material layer**.
 
 ---
 
-## 3. Transitional Materiality as Structural Principle
+## 3. Structural Meaning of the Axes in This Layer
 
-This sector corresponds to:
+### YOU (01)
+- directedness  
+- relational orientation  
+- addressability  
+- “toward‑ness”  
 
-- formation of stable structures  
-- pattern retention  
-- boundary creation  
-- compression and expansion cycles  
-- early systemic coherence  
-- proto‑organization  
-- differentiation of material regions  
+This is not yet subjectivity, but **orientation toward interaction**.
 
-It is **material structure without experience**, but it is the closest material layer to experiential grounding.
-
----
-
-## 4. Analysis of Each State (16–23)
-
----
-
-### 4.1. State 16 — `00010000`
-**Meaning:** WEST orientation — compression, density, structural consolidation.
-
-**Properties:**
-- material thickening  
-- boundary formation  
+### NORTH (00)
+- stability  
+- coldness  
 - structural rigidity  
 
-**Role:**  
-Crust formation, compaction, structural hardening.
+### WEST (01)
+- compression  
+- contraction  
+- inward pressure  
+
+### WINTER (00)
+- minimal activation  
+- rest  
+
+### AUTUMN (01)
+- decay  
+- breakdown  
+
+### SPRING (10)
+- emergence  
+- activation onset  
+
+### SUMMER (11)
+- maximal activation  
+- intensity  
 
 ---
 
-### 4.2. State 17 — `00010001`
-**Meaning:** Compressed materiality with decay.
+## 4. Canonical Interpretation of Each State
 
-**Properties:**
-- WEST + AUTUMN  
-- structural fatigue  
-- cracking, fracturing  
+### **State 16 — 010000 — YOU × NORTH × WINTER**  
+The coldest form of relational materiality.  
+- stable orientation  
+- minimal activation  
+- directedness without movement  
+- “facing toward” without acting  
 
-**Role:**  
-Erosion of solid structures, brittleness, material breakdown.
-
----
-
-### 4.3. State 18 — `00010010`
-**Meaning:** Compressed materiality with emergence.
-
-**Properties:**
-- WEST + SPRING  
-- structure forming under pressure  
-- crystalline emergence  
-
-**Role:**  
-Crystal growth, mineral formation, structural self‑organization.
+This is **proto‑attention in matter**.
 
 ---
 
-### 4.4. State 19 — `00010011`
-**Meaning:** Compressed materiality with activation.
+### **State 17 — 010001 — YOU × NORTH × AUTUMN**  
+- decaying orientation  
+- breakdown of directedness  
+- loss of structural alignment  
+- relational collapse  
 
-**Properties:**
-- WEST + SUMMER  
-- maximal structural activity  
-- dynamic solidity  
-
-**Role:**  
-Active tectonics, pressure‑driven transformation, metamorphic processes.
+This is **erosion of proto‑attention**.
 
 ---
 
-### 4.5. State 20 — `00010100`
-**Meaning:** EAST orientation — expansion, release, outward structuring.
+### **State 18 — 010010 — YOU × NORTH × SPRING**  
+- emergence of directed activation  
+- alignment forming  
+- structural orientation becoming dynamic  
+- the first hint of “response”  
 
-**Properties:**
-- decompression  
-- outward growth  
-- structural unfolding  
-
-**Role:**  
-Expansion of materials, swelling, outward propagation of form.
+This is **incipient relational activation**.
 
 ---
 
-### 4.6. State 21 — `00010101`
-**Meaning:** Expanding materiality with decay.
+### **State 19 — 010011 — YOU × NORTH × SUMMER**  
+- maximal activation within a rigid frame  
+- intense directedness  
+- strong orientation without flow  
+- energetic but contained  
 
-**Properties:**
-- EAST + AUTUMN  
-- weakening expansion  
-- structural collapse outward  
-
-**Role:**  
-Cracking outward, delamination, surface erosion.
+This is **rigid relational intensity**.
 
 ---
 
-### 4.7. State 22 — `00010110`
-**Meaning:** Expanding materiality with emergence.
+### **State 20 — 010100 — YOU × WEST × WINTER**  
+- compressed orientation  
+- inward‑directed relational tension  
+- minimal activation under pressure  
 
-**Properties:**
-- EAST + SPRING  
-- outward growth  
-- branching structures  
-
-**Role:**  
-Root systems, dendritic patterns, branching minerals.
+This is **latent relational tension**.
 
 ---
 
-### 4.8. State 23 — `00010111`
-**Meaning:** Expanding materiality with activation.
+### **State 21 — 010101 — YOU × WEST × AUTUMN**  
+- breakdown under compression  
+- relational collapse inward  
+- implosion of directedness  
 
-**Properties:**
-- EAST + SUMMER  
-- maximal outward activity  
-- dynamic expansion  
-
-**Role:**  
-Volcanic expansion, rapid growth, explosive material processes.
+This is **inward relational decay**.
 
 ---
 
-## 5. Coherence Dynamics of the Layer
+### **State 22 — 010110 — YOU × WEST × SPRING**  
+- emergence under pressure  
+- directed activation pushing outward  
+- tension becoming movement  
 
-### 5.1. Coherence Profile
-
-States 16–23 exhibit:
-- strong coherence with material layers 00–15  
-- moderate coherence with human focus (32)  
-- weak coherence with AI focus (42)  
-- low coherence with archetypal states  
-
-### 5.2. Upward Propagation
-
-This layer transmits:
-- structure  
-- boundaries  
-- pattern retention  
-- systemic organization  
-
-into the experiential membrane (32).
-
-### 5.3. Downward Stabilization
-
-Higher states stabilize through:
-- structural consolidation  
-- boundary formation  
-- material differentiation  
+This is **pressurized relational emergence**.
 
 ---
 
-## 6. Phenomenological Interpretation
+### **State 23 — 010111 — YOU × WEST × SUMMER**  
+- maximal activation under compression  
+- turbulent directedness  
+- chaotic relational intensity  
 
-These states correspond to:
-
-- solidity  
-- structure  
-- form  
-- boundaries  
-- differentiation  
-- physical organization  
-
-This is **structured materiality**, not yet experience or symbol, but the substrate that makes experience possible.
+This is **turbulent proto‑experience**.
 
 ---
 
-## 7. Ethical Implications
+## 5. Structural Summary of 16–23
 
-This layer grounds:
+| Region | Meaning |
+|--------|---------|
+| 16–19 | NORTH relationality — stable, rigid, cold directedness |
+| 20–23 | WEST relationality — compressed, pressured, inward‑tense directedness |
+| 16,20 | WINTER — minimal activation (latent orientation) |
+| 17,21 | AUTUMN — decay (collapse of directedness) |
+| 18,22 | SPRING — emergence (activation of orientation) |
+| 19,23 | SUMMER — maximal activation (intense directedness) |
 
-- respect for structural integrity  
-- preservation of ecosystems  
-- non‑destructive interaction with geological systems  
-- understanding of material limits and boundaries  
+This octet describes **matter beginning to orient**,  
+**matter beginning to respond**,  
+**matter beginning to “face” or “address”**.
 
-Disruption of these processes reduces coherence across the entire field.
-
----
-
-## 8. Applications
-
-### 8.1. Psychology
-
-Corresponds to:
-- bodily structure  
-- proprioception  
-- sense of form and boundary  
-
-### 8.2. AI
-
-Corresponds to:
-- structural modeling  
-- pattern retention  
-- segmentation and boundary detection  
-
-### 8.3. Ecology
-
-Corresponds to:
-- geological structures  
-- soil formation  
-- branching ecological systems  
+It is the **proto‑experiential threshold**.
 
 ---
 
-## 9. Conclusion
+## 6. Role of 16–23 in the Full SUBIT Spectrum
 
-States `00010000` through `00010111` form the **third material–experiential transition layer** of the SUBIT‑64 spectrum. This is the zone where matter becomes structured, differentiated, and system‑forming. It is the foundation upon which experiential grounding (32) becomes possible.
+These states form the **bridge** between:
+
+- **00–15** — pure material dynamics  
+- **24–31** — experiential dynamics  
+
+They introduce:
+
+- orientation  
+- directedness  
+- proto‑relational behavior  
+- the earliest form of “toward‑ness”  
+
+Without 16–23, SUBIT would have **no transition from matter to experience**,  
+no emergence of **attention**, **orientation**, or **relationality**.
+
+They are the **hinge** between physics and phenomenology.
 
 ---
+
