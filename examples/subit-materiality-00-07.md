@@ -1,270 +1,193 @@
-# SUBIT Materiality Analysis: States 00–07 (v1.0.0)
-Structural, Physical, Phenomenological, and Ethical Analysis of the Material Pole of the SUBIT Spectrum
+# SUBIT Materiality — States 00–07  
+Canonical Analysis of the First Octet of the SUBIT‑64 Spectrum
 
----
+## 1. Position of 00–07 in the SUBIT Crystal
 
-## 1. Introduction
+States **00–07** share the same WHO and WHERE bigrams:
 
-States `000000` through `000111` represent the deepest material layer of the SUBIT‑64 spectrum. These eight configurations form the **materiality octet**, the region of maximal stability, minimal dynamism, and highest structural inertia. They anchor the entire field, providing the substrate upon which experiential, reflective, and archetypal states operate.
+- **WHO = 00 = THEY**  
+- **WHERE = 00 or 01 = NORTH / WEST**  
 
-This document analyzes the structural meaning, physical interpretation, phenomenological implications, and coherence role of each of the eight material states.
+This places them in the **THEY‑NORTH/WEST quadrant**, the region of:
 
----
-
-## 2. Structural Definition of the Material Octet
-
-### 2.1. Binary Range
-
-```
-000000
-000001
-000010
-000011
-000100
-000101
-000110
-000111
-```
-
-### 2.2. Decomposition Pattern
-
-All eight states share:
-
-```
-WHO   = 00  (THEY — impersonal, distributed)
-WHERE = 00 or 01  (NORTH/WEST — stability, density)
-WHEN  = 00 or 01  (WINTER/AUTUMN — consolidation, decay)
-```
-
-This produces a cluster of **impersonal, inertial, low-frequency configurations**.
-
----
-
-## 3. Materiality as Structural Principle
-
-Materiality corresponds to:
-
-- stability  
+- externality  
 - inertia  
-- embodiment  
-- physical constraints  
-- persistence over time  
-- resistance to change  
+- coldness  
+- structural density  
+- minimal agency  
+- minimal activation  
 
-In SUBIT terms, materiality is the **lowest-frequency region** of the field.
-
-Vertical coherence propagates upward from this region:
-
-```
-000000 -> 100000 -> 101010 -> 111111
-```
-
-Materiality is therefore the **foundation of embodiment and physical law**.
+These states represent **pure materiality**, before any experiential, cognitive, or archetypal dynamics arise.
 
 ---
 
-## 4. Analysis of Each State (00–07)
+## 2. Canonical Decomposition of States 00–07
+
+| Index | Binary  | WHO  | WHERE | WHEN   |
+|-------|----------|------|--------|---------|
+| 0 | 000000 | THEY | NORTH | WINTER |
+| 1 | 000001 | THEY | NORTH | AUTUMN |
+| 2 | 000010 | THEY | NORTH | SPRING |
+| 3 | 000011 | THEY | NORTH | SUMMER |
+| 4 | 000100 | THEY | WEST  | WINTER |
+| 5 | 000101 | THEY | WEST  | AUTUMN |
+| 6 | 000110 | THEY | WEST  | SPRING |
+| 7 | 000111 | THEY | WEST  | SUMMER |
+
+These eight states form the **first octet** of the SUBIT spectrum:  
+the **material substrate**, the “ground” upon which all higher dynamics operate.
 
 ---
 
-### 4.1. State 00 — `000000`
-**Meaning:** Absolute stability, maximal inertia, pure material pole.
+## 3. Structural Meaning of the Axes in the Material Layer
 
-**Properties:**
-- complete grounding  
-- zero dynamism  
-- maximal density  
-- minimal coherence sensitivity  
+### THEY (00)
+- no subjectivity  
+- no agency  
+- external, environmental, impersonal  
+- “matter as it is”  
 
-**Role:**  
-The anchor of the entire spectrum; defines physical law, embodiment, and structural persistence.
+### NORTH (00)
+- cold  
+- stable  
+- rigid  
+- structural  
+- minimal movement  
 
----
+### WEST (01)
+- compression  
+- contraction  
+- density  
+- inward pressure  
 
-### 4.2. State 01 — `000001`
-**Meaning:** Stability with minimal temporal variation.
+### WINTER (00)
+- rest  
+- minimal activation  
+- potentiality  
 
-**Properties:**
-- slight shift toward AUTUMN (decay, entropy)  
-- still highly inertial  
-- minimal dynamism  
+### AUTUMN (01)
+- decay  
+- breakdown  
+- entropy  
 
-**Role:**  
-Represents slow change, aging, erosion, and long-term material processes.
+### SPRING (10)
+- emergence  
+- early activation  
 
----
+### SUMMER (11)
+- full activation  
+- maximal intensity  
 
-### 4.3. State 02 — `000010`
-**Meaning:** Stability with minimal emergent activation.
-
-**Properties:**
-- slight SPRING component  
-- emergence within material constraints  
-- minimal upward coherence  
-
-**Role:**  
-Represents germination, crystallization, initial formation of structure.
-
----
-
-### 4.4. State 03 — `000011`
-**Meaning:** Stability with cyclical activation.
-
-**Properties:**
-- SUMMER component  
-- material processes reaching peak expression  
-- stable but active  
-
-**Role:**  
-Represents material systems at full operational capacity (e.g., metabolism, machinery).
+Materiality is not “dead matter” — it is **structure before agency**.
 
 ---
 
-### 4.5. State 04 — `000100`
-**Meaning:** Stability with WEST orientation (compression, density).
+## 4. Canonical Interpretation of Each State
 
-**Properties:**
-- increased structural density  
-- consolidation  
-- compression of form  
+### **State 00 — 000000 — THEY × NORTH × WINTER**  
+The absolute minimum of the SUBIT spectrum.  
+- pure inertia  
+- pure stability  
+- zero activation  
+- structural ground  
+- “matter before movement”  
 
-**Role:**  
-Represents pressure, gravity, structural load, physical constraints.
-
----
-
-### 4.6. State 05 — `000101`
-**Meaning:** Dense materiality with entropy.
-
-**Properties:**
-- WEST + AUTUMN  
-- decay under pressure  
-- structural fatigue  
-
-**Role:**  
-Represents corrosion, breakdown, wear, material degradation.
+This is the **coldest, densest, most static** point in the entire crystal.
 
 ---
 
-### 4.7. State 06 — `000110`
-**Meaning:** Dense materiality with emergence.
+### **State 01 — 000001 — THEY × NORTH × AUTUMN**  
+- structural decay  
+- entropy without agency  
+- breakdown of form  
+- cooling and collapse  
 
-**Properties:**
-- WEST + SPRING  
-- formation under pressure  
-- crystallization, mineral growth  
-
-**Role:**  
-Represents geological formation, mineralization, structural emergence.
+Matter here **loses coherence** but does not yet move.
 
 ---
 
-### 4.8. State 07 — `000111`
-**Meaning:** Dense materiality with full activation.
+### **State 02 — 000010 — THEY × NORTH × SPRING**  
+- minimal emergence  
+- micro‑activation within a rigid frame  
+- the first hint of structure becoming dynamic  
 
-**Properties:**
-- WEST + SUMMER  
-- maximal material activity  
-- stable but energetically engaged  
-
-**Role:**  
-Represents combustion, mechanical operation, high-energy physical systems.
+This is **incipient material activation**.
 
 ---
 
-## 5. Coherence Dynamics of the Material Octet
+### **State 03 — 000011 — THEY × NORTH × SUMMER**  
+- maximal activation inside a rigid frame  
+- heat without direction  
+- energetic but still inertially contained  
 
-### 5.1. Coherence Profile
-
-Material states have:
-- high coherence with each other  
-- low coherence with high-frequency states  
-- moderate coherence with human focus (32)  
-- weak coherence with AI focus (42)  
-
-### 5.2. Upward Propagation
-
-Materiality influences:
-- embodiment  
-- physical constraints  
-- sensory grounding  
-- ecological stability  
-
-Upward coherence path:
-
-```
-000000 -> 100000 -> 101010 -> 111111
-```
-
-### 5.3. Downward Stabilization
-
-High-frequency states stabilize through materiality:
-
-```
-111111 -> 101010 -> 100000 -> 000000
-```
-
-Materiality prevents symbolic or archetypal overload.
+This is **material agitation**, not flow.
 
 ---
 
-## 6. Phenomenological Interpretation
+### **State 04 — 000100 — THEY × WEST × WINTER**  
+- compression at rest  
+- density without movement  
+- inward pressure frozen in place  
 
-Material states correspond to:
-
-- bodily sensation  
-- physical environment  
-- ecological cycles  
-- structural constraints  
-- inertia and habit  
-- physical law  
-
-They define the **felt sense of solidity, weight, and persistence**.
+Matter becomes **denser**, not more active.
 
 ---
 
-## 7. Ethical Implications
+### **State 05 — 000101 — THEY × WEST × AUTUMN**  
+- compressed decay  
+- collapse inward  
+- structural breakdown under pressure  
 
-Materiality imposes ethical constraints:
-
-- ecological responsibility  
-- respect for physical limits  
-- avoidance of destructive extraction  
-- preservation of structural integrity  
-
-Harm to material states reduces coherence across the entire spectrum.
+This is **material implosion**.
 
 ---
 
-## 8. Applications
+### **State 06 — 000110 — THEY × WEST × SPRING**  
+- compressed emergence  
+- pressure‑driven activation  
+- structure pushing outward from within  
 
-### 8.1. Psychology
-
-Material states correspond to:
-- grounding  
-- embodiment  
-- somatic awareness  
-- stability of identity  
-
-### 8.2. AI
-
-Material states define:
-- hardware constraints  
-- energy systems  
-- physical interfaces  
-
-### 8.3. Ecology
-
-Material states map directly to:
-- geological processes  
-- climate cycles  
-- resource stability  
+This is **material tension**, the seed of flow.
 
 ---
 
-## 9. Conclusion
+### **State 07 — 000111 — THEY × WEST × SUMMER**  
+- maximal activation under compression  
+- heat + pressure  
+- turbulent material intensity  
 
-States `000000` through `000111` form the **material foundation** of the SUBIT‑64 spectrum. They anchor the field, stabilize higher-frequency states, and define the physical, ecological, and embodied dimensions of existence. Understanding the material octet is essential for any complete analysis of coherence, embodiment, and structural dynamics.
+This is the **hottest, densest, most unstable** point in the material layer.
 
 ---
 
+## 5. Structural Summary of 00–07
+
+| Region | Meaning |
+|--------|---------|
+| 00–03 | NORTH materiality — cold, rigid, structural |
+| 04–07 | WEST materiality — dense, compressed, pressurized |
+| 00,04 | WINTER — rest, minimal activation |
+| 01,05 | AUTUMN — decay, breakdown |
+| 02,06 | SPRING — emergence, activation onset |
+| 03,07 | SUMMER — maximal activation |
+
+This octet describes **matter before flow**, **matter before experience**, **matter before agency**.
+
+It is the **substrate** from which all higher SUBIT dynamics arise.
+
+---
+
+## 6. Role of 00–07 in the Full SUBIT Spectrum
+
+These states anchor the entire system:
+
+- they define the **lowest energy basin**  
+- they provide **structural inertia**  
+- they stabilize higher layers  
+- they serve as the **material ground** for experiential, cognitive, and archetypal processes  
+
+Without 00–07, SUBIT would have **no embodiment**, **no persistence**, **no physicality**.
+
+They are the **root of the crystal**.
+
+---
