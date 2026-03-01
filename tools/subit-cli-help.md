@@ -1,181 +1,229 @@
-# SUBIT CLI — Help (v1.0.0)
-Universal Command‑Line Interface for SUBIT‑64 Engines, Simulations, and Analysis
-
-Usage:
-  subit <command> [subcommand] [options]
-
-SUBIT is a structural interface for encoding inputs, running simulations, analyzing coherence, and inspecting the internal state of a SUBIT Engine. All commands are deterministic, minimal, and coherence‑aligned.
+# subit-cli-help.md  
+Version 1.0.0  
+Status: Canonical Help Output  
 
 ---
 
-## Commands
-
-  encode       Encode input into a SUBIT state
-  simulate     Run SUBIT simulation cycles
-  analyze      Compute coherence, transitions, amplitudes
-  inspect      View internal engine structures
-  util         Utility commands (reset, export, config)
-  help         Show help for any command or subcommand
-
-Run `subit help <command>` for details.
+## NAME
+subit — command‑line interface for the SUBIT Engine
 
 ---
 
-## encode — Input → SUBIT State
+## SYNOPSIS
+```
+subit <mode> [options] [arguments]
+```
+
+Modes are deterministic and mutually exclusive.  
+All outputs follow the canonical SUBIT mapping:
+
+- WHO: 10 = ME, 11 = WE, 01 = YOU, 00 = THEY  
+- WHERE: 10 = EAST, 11 = SOUTH, 01 = WEST, 00 = NORTH  
+- WHEN: 10 = SPRING, 11 = SUMMER, 01 = AUTUMN, 00 = WINTER  
+
+Total state space:
+
+```
+4 × 4 × 4 = 64 = 2⁶
+```
+
+---
+
+## DESCRIPTION
+`subit` provides structural access to the SUBIT Engine.  
+It encodes events, processes streams, analyzes trajectories, inspects states, maps domain concepts, and exports results.  
+The CLI exposes **structure**, not content.
+
+---
+
+## MODES
+
+### encode
+Encode a single input into one SUBIT state.
 
 Usage:
-  subit encode input "<string>"
-  subit encode fields --who <WHO> --where <WHERE> --when <WHEN>
-  subit encode state <0–63>
+```
+subit encode --text "<string>"
+subit encode --file <path>
+subit encode --json <path>
+```
+
+Example output:
+```
+STATE: 011100
+YOU × SOUTH × WINTER
+LAYER: Experiential (28)
+```
+
+---
+
+### stream
+Process a continuous input stream into a SUBIT trajectory.
+
+Usage:
+```
+subit stream --file <path>
+subit stream --stdin
+subit stream --json <path>
+```
+
+Example:
+```
+t=0  011000  YOU × EAST × WINTER
+t=1  011010  YOU × EAST × SPRING
+t=2  101010  ME  × EAST × SPRING
+```
 
 Options:
-  --who        ME | YOU | THEY | IT
-  --where      NORTH | EAST | SOUTH | WEST
-  --when       WINTER | SPRING | SUMMER | AUTUMN
-
-Examples:
-  subit encode input "pressure rising"
-  subit encode fields --who ME --where EAST --when SPRING
-  subit encode state 42
+```
+--show-layer
+--show-delta
+--limit <n>
+```
 
 ---
 
-## simulate — Run SUBIT Simulation
+### analyze
+Analyze a SUBIT trajectory file.
 
 Usage:
-  subit simulate step --input "<string>"
-  subit simulate run --steps <N> --input-stream <file>
-  subit simulate loop
+```
+subit analyze <trajectory.subit>
+```
 
-Options:
-  --decay <float>        Amplitude decay factor (0.95–0.999)
-  --mode <mode>          deterministic | stochastic | hybrid
-  --seed <int>           Random seed for stochastic mode
+Example:
+```
+LENGTH: 512 steps
+TEMPORAL COHERENCE:   0.78
+HORIZONTAL COHERENCE: 0.64
+VERTICAL COHERENCE:   0.71
 
-Examples:
-  subit simulate step --input "signal"
-  subit simulate run --steps 100 --input-stream data.txt
-  subit simulate loop
+PRIMARY ATTRACTOR:
+  011010 (YOU × EAST × SPRING)
+```
 
 ---
 
-## analyze — Coherence, Transitions, Amplitudes
+### inspect
+Inspect a single SUBIT state.
 
 Usage:
-  subit analyze coherence <state>
-  subit analyze transitions <state>
-  subit analyze row <state>
-  subit analyze amplitudes
+```
+subit inspect --state <index>
+subit inspect --bits <6-bit>
+```
 
-Descriptions:
-  coherence     Compute V(i) for a given state
-  transitions   Show transition probabilities from a state
-  row           Display coherence matrix row C[state,*]
-  amplitudes    Show amplitude vector sorted by magnitude
-
-Examples:
-  subit analyze coherence 32
-  subit analyze transitions 42
-  subit analyze amplitudes
+Example:
+```
+INDEX: 42
+BITS:  101010
+ME × EAST × SPRING
+LAYER: Human (32–47)
+```
 
 ---
 
-## inspect — Internal Engine Structures
+### map
+Map a domain-specific label to a SUBIT region.
 
 Usage:
-  subit inspect state
-  subit inspect amplitudes
-  subit inspect coherence
-  subit inspect history --last <N>
-  subit inspect meta
+```
+subit map --label "<string>"
+```
 
-Descriptions:
-  state         Show current SUBIT state
-  amplitudes    Show amplitude vector A[i]
-  coherence     Show coherence vector V[i]
-  history       Show recent state transitions
-  meta          Show engine metadata
-
-Examples:
-  subit inspect state
-  subit inspect history --last 20
+Example:
+```
+LABEL: panic attack
+PRIMARY REGION:
+  011111  YOU × SOUTH × SUMMER
+  011011  YOU × EAST  × SUMMER
+```
 
 ---
 
-## util — Utility Tools
+### export
+Export a trajectory into an external format.
 
 Usage:
-  subit util reset
-  subit util export --format <json|yaml|txt>
-  subit util load <file>
-  subit util validate <file>
+```
+subit export <trajectory.subit> --format csv
+subit export <trajectory.subit> --format json
+```
 
-Descriptions:
-  reset         Clear amplitude vector and history
-  export        Export engine state
-  load          Load configuration file
-  validate      Validate configuration file
-
-Examples:
-  subit util reset
-  subit util export --format json
+CSV example:
+```
+t,index,bits,who,where,when,layer
+0,24,011000,YOU,EAST,WINTER,Experiential
+1,26,011010,YOU,EAST,SPRING,Experiential
+2,42,101010,ME,EAST,SPRING,Human
+```
 
 ---
 
-## help — Display Help
-
-Usage:
-  subit help
-  subit help <command>
-  subit help <command> <subcommand>
-
-Examples:
-  subit help encode
-  subit help simulate run
-
----
-
-## WHO / WHERE / WHEN Reference
-
-WHO:
-  ME, YOU, THEY, IT
-
-WHERE:
-  NORTH, EAST, SOUTH, WEST
-
-WHEN:
-  WINTER, SPRING, SUMMER, AUTUMN
+## GLOBAL OPTIONS
+```
+--lang <code>       interface language
+--layers <set>      restrict to specific layers
+--seed <n>          deterministic seed
+--config <file>     custom config file
+--out <file>        write output to file
+--quiet             minimal output
+--verbose           detailed logs
+```
 
 ---
 
-## Exit Codes
-
-  0   Success
-  1   Invalid arguments
-  2   Invalid state or field
-  3   Configuration error
-  4   Runtime error
+## EXIT STATUS
+```
+0   success
+1   general error
+2   invalid arguments
+3   invalid input format
+4   invalid trajectory file
+```
 
 ---
 
-## Example Session
+## ERRORS
 
-$ subit encode input "pressure rising"
-STATE: 27 (00011011)
+### Unknown mode
+```
+ERROR: Unknown mode 'analyse'. Did you mean 'analyze'?
+```
 
-$ subit simulate step --input "pressure rising"
-NEXT: 32 (100000)
-COHERENCE: 0.934
+### Invalid bits
+```
+ERROR: Expected 6 bits. Received: 10101
+```
 
-$ subit analyze transitions 32
-32: 0.41
-31: 0.22
-42: 0.18
-...
+### Missing input
+```
+ERROR: No input provided. Use --text, --file, or --stdin.
+```
 
-$ subit inspect amplitudes
-A[32] = 0.91
-A[27] = 0.44
-A[42] = 0.22
+### Invalid trajectory
+```
+ERROR: File is not a valid SUBIT trajectory.
+```
+
+---
+
+## EXAMPLES
+
+Encode:
+```
+subit encode --text "I feel grounded."
+```
+
+Stream + analyze:
+```
+subit stream --file chat.txt --out chat.subit
+subit analyze chat.subit
+```
+
+Inspect:
+```
+subit inspect --state 42
+```
 
 ---
